@@ -1,4 +1,6 @@
 import turtle
+import math
+
 s = turtle.Screen()
 s.bgcolor("black")
 t = turtle.Turtle()
@@ -29,13 +31,15 @@ for i in range(5):
   t.pendown()
   house(50)
 
-def square(size)
-  while size > 0
-  square(size)
-  t.penup
-  t.rt(45)
-  t.fd(10/math.sqrt(2))
-  t.lt(45)
-  t.rt(5)
-  t.pendown
-  size -= 20
+def squares(size):
+	while size > 0:
+		square(size)
+		t.penup()
+		t.rt(45)
+		t.fd(20/math.sqrt(2))
+		t.lt(45)
+		t.rt(5)
+		t.pendown()
+		size -= 20
+
+squares(200)
